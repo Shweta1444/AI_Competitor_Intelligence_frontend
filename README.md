@@ -106,6 +106,8 @@ npm run preview
 
 ---
 
+URL- https://ai-competitor-intelligence-frontend-navy.vercel.app/
+
 ## 👩‍💻 Author
 
 Shweta Sinha
