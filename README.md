@@ -100,7 +100,9 @@ npm run preview
 
 ## 📸 Screenshots
 
-Add screenshots here.
+### Home Page
+
+![Home Page](./screenshots/home.png)
 
 ---
 
