@@ -137,107 +137,6 @@ const generateReport = async () => {
 
   },[showPopup]);
 
-
-
-
-
-
-
-  const downloadPdf = async()=>{
-
-
-    if(!report){
-
-      setError(
-        "Generate a report first."
-      );
-
-      return;
-
-    }
-
-
-
-    try{
-
-
-      const response =
-      await fetch(
-        "http://localhost:3000/download-report",
-        {
-
-        method:"POST",
-
-        headers:{
-          "Content-Type":"application/json"
-        },
-
-
-        body:JSON.stringify({
-          report
-        })
-
-      });
-
-
-
-      if(!response.ok){
-
-        throw new Error(
-          "Failed to generate PDF"
-        );
-
-      }
-
-
-
-      const blob =
-      await response.blob();
-
-
-
-      const url =
-      window.URL.createObjectURL(blob);
-
-
-
-      const a=document.createElement("a");
-
-
-      a.href=url;
-
-      a.download="competitor-report.pdf";
-
-
-      document.body.appendChild(a);
-
-      a.click();
-
-
-      document.body.removeChild(a);
-
-
-      window.URL.revokeObjectURL(url);
-
-
-    }
-
-    catch(err){
-
-      console.error(err);
-
-      setError(
-        "Failed to download PDF"
-      );
-
-    }
-
-  };
-
-
-
-
-
 return (
 
 <>
@@ -390,8 +289,6 @@ View Report
 <ReportViewer
 
 report={report}
-
-downloadPdf={downloadPdf}
 
 />
 
