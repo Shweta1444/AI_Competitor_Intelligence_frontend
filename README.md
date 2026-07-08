@@ -102,7 +102,7 @@ npm run preview
 
 ### Home Page
 
-![Home Page](./src/screenshots/home.png)
+![Home](src/screenshots/home.png)
 
 ---
 
