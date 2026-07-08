@@ -99,7 +99,7 @@ const loadingSectionRef = useRef<HTMLDivElement>(null);
 
 
       const response = await fetch(
-        "http://localhost:3000/analyze",
+        `${import.meta.env.VITE_API_URL}/analyze`,
         {
           method: "POST",
 
